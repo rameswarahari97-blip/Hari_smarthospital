@@ -67,7 +67,7 @@ DEPT_INFO = {
     'Gastroenterology':{
     'icon':'🤰','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
     'desc':'when your stomach hurts',
-    'next':['Visit level 4, hopefully it's not just air']
+    'next':['Visit level 4, hopefully its not just air']
     },
     'Neurology':{
     'icon':'🧠','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
