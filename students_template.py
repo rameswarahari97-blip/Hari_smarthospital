@@ -78,12 +78,13 @@ DEPT_INFO = {
     'icon':'💉','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
     'desc':'Just need to check in general medicine',
     'next':['Visit level 2, and go left']
-    },}
+    },
 'Dermatology':{
     'icon':'👶','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
     'desc':'You need skin specialist',
     'next':['Visit level 1, Be excited to go young']
     },
+}
 
 # ── Hero Header ───────────────────────────────────────────────────────────────
 st.markdown("""
