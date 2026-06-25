@@ -1,7 +1,10 @@
+import streamlit as st
+import pandas
+import pickle
+import os
+import numpy as np
 
-
-
-
+st.set_page_config(page_title="Smart Hospital Patient Navigator",page_icon="⚗️",layout="wide")
 
 
 
@@ -31,10 +34,56 @@ st.markdown("""
         div[data-testid="stCheckbox"] label {
             font-size: 14px !important; font-weight: 500 !important; color: #374151 !important;
         }
-</style>
+</style
 """, unsafe_allow_html=True)
 ###End of above CSS, continue with features here
+@st.cache_resource
+def load_model():
+    with open('hospital_model.pkl', 'rb') as f:
+        return pickle. load(f)
 
+bundle = load_model()
+model = bundle['model']
+scaler = bundle['scaler']
+features = bundle['features']
+cols_to_scale = bundle['cols_to_scale']
+dept_map_inv = bundle['dept_map_inv']
+gender_map = bundle['gender_map']
+temp_map = bundle['temp_map']
+hr_map = bundle['hr_map']
+dur_map = bundle['dur_map']
+cc_map = bundle['cc_map']
+DEPT_INFO = {
+    'Respiratory Medicine':{
+    'icon':'🫁','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'desc':'lung hurt,go here',
+    'next':['Visit level 2, and get well soon']
+    },
+    'Cardiology':{
+    'icon':'💓','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'desc':'When you do less or more cardio, or even worse almost cardiac arrest',
+    'next':['Visit level 3, Prepare to buy a new heart']
+    },
+    'Gastroenterology':{
+    'icon':'🤰','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'desc':'when your stomach hurts',
+    'next':['Visit level 4, hopefully it's not just air']
+    },
+    'Neurology':{
+    'icon':'🧠','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'desc':'When your brain is not braining',
+    'next':['Visit level 5, and go pray']
+    },
+'General Medicine':{
+    'icon':'💉','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'desc':'Just need to check in general medicine',
+    'next':['Visit level 2, and go left']
+    },}
+'Dermatology':{
+    'icon':'👶','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'desc':'You need skin specialist',
+    'next':['Visit level 1, Be excited to go young']
+    },
 
 # ── Hero Header ───────────────────────────────────────────────────────────────
 st.markdown("""
