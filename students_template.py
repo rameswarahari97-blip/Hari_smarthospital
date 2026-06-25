@@ -55,32 +55,32 @@ dur_map = bundle['dur_map']
 cc_map = bundle['cc_map']
 DEPT_INFO = {
     'Respiratory Medicine':{
-    'icon':'🫁','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'icon':'🫁','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
     'desc':'lung hurt,go here',
     'next':['Visit level 2, and get well soon']
     },
     'Cardiology':{
-    'icon':'💓','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'icon':'💓','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
     'desc':'When you do less or more cardio, or even worse almost cardiac arrest',
     'next':['Visit level 3, Prepare to buy a new heart']
     },
     'Gastroenterology':{
-    'icon':'🤰','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'icon':'🤰','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
     'desc':'when your stomach hurts',
     'next':['Visit level 4, hopefully its not just air']
     },
     'Neurology':{
-    'icon':'🧠','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'icon':'🧠','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
     'desc':'When your brain is not braining',
     'next':['Visit level 5, and go pray']
     },
 'General Medicine':{
-    'icon':'💉','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'icon':'💉','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
     'desc':'Just need to check in general medicine',
     'next':['Visit level 2, and go left']
     },}
 'Dermatology':{
-    'icon':'👶','color':'#0284c7','bg','#e0f2fe','border':'#7dd3fc',
+    'icon':'👶','color':'#0284c7','bg':'#e0f2fe','border':'#7dd3fc',
     'desc':'You need skin specialist',
     'next':['Visit level 1, Be excited to go young']
     },
